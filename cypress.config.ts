@@ -6,6 +6,8 @@ export default defineConfig({
 		setupNodeEvents(on, config) {
 			// implement node event listeners here
 		},
+		baseUrl: 'https://demoqa.com/',
+		testIsolation: false,
 		excludeSpecPattern: [
 			'**/1-getting-started/*.js',
 			'**/2-advanced-examples/*.js',
