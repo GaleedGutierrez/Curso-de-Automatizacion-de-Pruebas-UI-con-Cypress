@@ -1,16 +1,17 @@
 // eslint-disable-next-line unused-imports/no-unused-vars, no-unused-vars
 const TESTING_FILES = [
 	'*.test.ts',
-	'*.test.js',
 	'*.spec.ts',
-	'*.spec.js',
 	'*.e2e.ts',
+	'*.test.js',
+	'*.spec.js',
 	'*.e2e.js',
 ];
 
 const TS_FILES = ['*.ts', '*.mts', '*.cts'];
-const TS_FILES_REACT = ['*.ts', '*.tsx', '*.mts', '*.cts'];
-const JS_FILES = ['*.js', '*.jsx', '*.mjs', '*.cjs'];
+const TS_FILES_REACT = [...TS_FILES, '*.tsx'];
+const JS_FILES = ['*.js', '*.mjs', '*.cjs'];
+const JS_FILES_REACT = [...JS_FILES, '*.jsx'];
 
 module.exports = {
 	root: true,
@@ -225,7 +226,7 @@ module.exports = {
 
 		// JSDoc
 		{
-			files: JS_FILES,
+			files: JS_FILES_REACT,
 			extends: ['plugin:jsdoc/recommended'],
 			plugins: ['jsdoc'],
 		},
@@ -384,6 +385,7 @@ module.exports = {
 			'error',
 			{
 				'./src/**/': 'KEBAB_CASE',
+				'./cypress/**/': 'KEBAB_CASE',
 			},
 		],
 
