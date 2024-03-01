@@ -4,6 +4,3 @@
 /**/*.bundle.js
 /**/index.bundle.*.js
 /**/googleAnalytics.js
-
-# Delete to the next commit
-cypress/e2e/*
