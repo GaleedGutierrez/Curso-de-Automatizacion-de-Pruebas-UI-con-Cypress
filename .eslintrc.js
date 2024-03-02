@@ -259,8 +259,11 @@ module.exports = {
 		// Testing: Cypress
 		{
 			files: ['*.cy.ts', '*.cy.js'],
-			extends: ['plugin:cypress/recommended'],
-			plugins: ['cypress'],
+			extends: [
+				'plugin:cypress/recommended',
+				'plugin:chai-expect/recommended',
+			],
+			plugins: ['cypress', 'chai-expect'],
 		},
 	],
 	parserOptions: {
