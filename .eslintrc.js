@@ -20,7 +20,9 @@ module.exports = {
 		browser: true,
 		amd: true,
 		node: true,
+		// Testing
 		// 'jest/globals': true,
+		'cypress/globals': true,
 	},
 	extends: [
 		'eslint:recommended',
