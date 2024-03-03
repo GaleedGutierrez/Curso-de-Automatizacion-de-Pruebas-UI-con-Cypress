@@ -242,7 +242,11 @@ module.exports = {
 		// 		'plugin:jest-dom/recommended',
 		// 		'plugin:testing-library/dom',
 		// 	],
-		// 	plugins: ['jest' , 'jest-dom', 'testing-library'],
+		// 	plugins: ['jest', 'jest-dom', 'testing-library'],
+		// 	// rules: {
+		// 	// 	'@typescript-eslint/unbound-method': 'off',
+		// 	// 	'jest/unbound-method': 'error',
+		// 	// },
 		// },
 
 		// Testing: Playwright
@@ -262,8 +266,14 @@ module.exports = {
 			extends: [
 				'plugin:cypress/recommended',
 				'plugin:chai-expect/recommended',
+				'plugin:mocha/recommended',
 			],
-			plugins: ['cypress', 'chai-expect'],
+			plugins: ['cypress', 'chai-expect', 'mocha'],
+			rules: {
+				'@typescript-eslint/unbound-method': 'off',
+				'prefer-arrow-callback': 'off',
+				'mocha/prefer-arrow-callback': 'error',
+			},
 		},
 	],
 	parserOptions: {

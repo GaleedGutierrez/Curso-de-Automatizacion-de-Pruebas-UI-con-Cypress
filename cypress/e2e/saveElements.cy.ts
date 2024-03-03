@@ -1,6 +1,6 @@
 Cypress.on('uncaught:exception', () => false);
-describe('Save elements', () => {
-	it('Repeat', () => {
+describe('Save elements', function () {
+	it('Repeat', function () {
 		cy.visit('automation-practice-form');
 		cy.get('[placeholder="First Name"]').parent();
 		cy.get('[placeholder="First Name"]').parents();
@@ -8,7 +8,7 @@ describe('Save elements', () => {
 		cy.get('form').find('label');
 	});
 
-	it('Avoid repetition', () => {
+	it('Avoid repetition', function () {
 		cy.visit('automation-practice-form');
 		cy.get('[placeholder="First Name"]')
 			.parents('form')
