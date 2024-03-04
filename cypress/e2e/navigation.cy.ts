@@ -1,4 +1,4 @@
-describe('Navigation', function () {
+describe('Navigation', { browser: 'chrome' }, function () {
 	it('Navigate to our fist page', function () {
 		cy.visit('https://platzi.com/');
 	});
