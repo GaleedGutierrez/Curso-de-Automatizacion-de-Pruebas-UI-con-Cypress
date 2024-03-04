@@ -7,6 +7,11 @@
 		"lint": "npx eslint ./**/*.{js,mjs,cjs,ts,mts,cts}",
 		"lint:fix": "npx eslint --fix ./**/*.{js,mjs,cjs,ts,mts,cts}",
 		"test": "cypress open",
+		"test:ui": "cypress open",
+		"test:headless": "cypress run --spec cypress/e2e/navigation.cy.ts",
+		"test:headless:chrome": "cypress run --browser chrome",
+		"test:headless:chrome:spec": "cypress run --browser chrome --spec cypress/e2e/navigation.cy.ts",
+		"test:headless:firefox": "cypress run --browser firefox",
 		"prepare": "husky"
 	},
 	"repository": {
