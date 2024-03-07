@@ -23,6 +23,7 @@ module.exports = {
 		// Testing
 		// 'jest/globals': true,
 		'cypress/globals': true,
+		mocha: true,
 	},
 	extends: [
 		'eslint:recommended',

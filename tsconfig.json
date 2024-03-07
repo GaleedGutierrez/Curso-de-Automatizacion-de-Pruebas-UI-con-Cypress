@@ -49,6 +49,6 @@
 		}
 	},
 	"extends": "@tsconfig/recommended/tsconfig.json",
-	"include": ["./**/*.ts"],
+	"include": ["./**/*.ts", "cypress/e2e/extractiongInformation.cy.ts"],
 	"exclude": ["node_modules"]
 }
