@@ -5,7 +5,7 @@ describe('Interacting with tables', function () {
 		cy.visit('https://www.w3schools.com/html/html_tables.asp');
 	});
 
-	it('Select', function () {
+	it('table', function () {
 		cy.get('#customers')
 			.find('th')
 			.each(($th) => {
